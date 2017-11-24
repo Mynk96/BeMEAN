@@ -1,0 +1,22 @@
+body {
+	background-color: #f9f9f9;
+}
+p {
+	color:#ffffff;
+}
+#form_div {
+	//box-shadow: 10px 10px 10px 10px black;
+	margin-top:1%;
+	margin-bottom: 1%;
+	border:dotted 0.5px #b7b3b3;
+}
+form {
+	padding:15px;
+}
+
+label {
+	color: black;
+	font-size: 18px;
+	font-family: 'Sans-seriff';
+	font-weight: lighter;
+}

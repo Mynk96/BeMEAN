@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html ng-app="BeMEAN">
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="bower_components/angularjs-datepicker/src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="app.js"></script>	
+		<title>BeMEAN</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-sm-offset-3 col-sm-5 col-lg-offset-3 col-md-offset-3 col-lg-5 col-md-5" id="form_div">
+			<form class="form-horizontal" ng-controller='formController' ng-submit="submitStudentDetails()">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text"  class="form-control" placeholder="Enter Your Name" ng-model="student.name" required/><br/>	
+				</div>
+				<div class="form-group">
+					<label for="id">Bits Id:</label>
+					<input type="text" class="form-control" placeholder="Enter Your Id" ng-model="student.id" required >
+				</div>
+				<div class="form-group">
+					<label for="gender">Gender:</label><br>
+					<label><input required type="radio" value="male" ng-model="student.gender" /> Male</label>
+					<label><input type="radio" value="female" ng-model="student.gender" />Female</label>
+				</div>
+				<div class="form-group">
+					<label for="date_of_birth">Date of Birth</label>
+					<datepicker date-format="dd-MM-yyyy" date-set="02-01-1972">
+						<input type="text" class="form-control" ng-model="student.birth" placeholder="Click to select" required>
+					</datepicker>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" class="form-control" ng-model="student.email" placeholder="Enter your email" required />
+				</div>
+				<div class="form-group">
+					<label for="contact">Contact No:</label>
+					<input type="number" class="form-control" ng-model="student.contact" required/>
+				</div>
+				<div class="form-group">
+					<label for="study_options">Loves to study:</label><br/>
+					<input type="checkbox" value="Maths" ng-model="student.maths"/> Maths<br/>
+					<input type="checkbox" value="Chemistry" ng-model="student.chemistry"/> Chemistry <br/>
+					<input type="checkbox" value="Physics" ng-model="student.physics"/> Physics <br/>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Submit" class="btn btn-success"/>
+					<a href="/data.html" class="btn btn-info">Show Student Details</a>
+				</div>
+			</form>
+			</div>
+		</div>
+	</body>
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="bower_components/angularjs-datepicker/src/js/angular-datepicker.js"></script>
+		<script src="https://use.fontawesome.com/a54721d3a3.js"></script>
+</html>
