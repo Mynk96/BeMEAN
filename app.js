@@ -43,7 +43,7 @@
 			if (s.physics == true) {
 				subjects = subjects + "Physics ";
 			}
-			if (s.Maths == true) {
+			if (s.maths == true) {
 				subjects = subjects + "Maths ";
 			}
 			if (subjects === "") {
